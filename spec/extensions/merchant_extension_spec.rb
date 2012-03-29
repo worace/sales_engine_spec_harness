@@ -6,8 +6,8 @@ describe SalesEngine::Merchant, merchant: true do
       it  "returns an array of Dates in descending order of revenue" do
         dates = SalesEngine::Merchant.dates_by_revenue
 
-        dates.first.should == DateTime.parse("2012-03-09")
-        dates[21].should == DateTime.parse("2012-03-06")
+        dates.first.should == Date.parse("2012-03-09")
+        dates[21].should == Date.parse("2012-03-06")
       end
     end
 
@@ -16,8 +16,8 @@ describe SalesEngine::Merchant, merchant: true do
         dates = SalesEngine::Merchant.dates_by_revenue(5)
 
         dates.size.should == 5
-        dates[1].should == DateTime.parse("2012-03-08")
-        dates.last.should == DateTime.parse("2012-03-15")
+        dates[1].should == Date.parse("2012-03-08")
+        dates.last.should == Date.parse("2012-03-15")
       end
     end
 

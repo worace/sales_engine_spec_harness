@@ -19,7 +19,7 @@ describe SalesEngine::Invoice, invoice: true do
 
     describe ".average_revenue(date)" do
       it "returns the average of the invoice revenues for that date" do
-        SalesEngine::Invoice.average_revenue(DateTime.parse("March 17, 2012")).should == BigDecimal("11125.65")
+        SalesEngine::Invoice.average_revenue(Date.parse("March 17, 2012")).should == BigDecimal("11125.65")
       end
     end
 
